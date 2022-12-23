@@ -1,0 +1,27 @@
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+end
+
+# Theme omf bobthefisher
+set -g theme_nerd_fonts yes
+set -g theme_date_format "+%a %H:%M"
+set -g theme_display_vagrant yes
+set -g theme_color_scheme dracula
+set -g theme_newline_cursor yes
+set -g theme_title_display_user yes
+set -g theme_title_display_process yes
+set -g theme_display_cmd_duration yes
+set -g theme_nerd_fonts yes
+set -g theme_powerline_fonts yes
+
+# Source Aliases
+source ~/.bash_aliases
+source ~/.profile
+
+# golang
+set -g fish_user_paths "/usr/local/go/bin" fish_user_paths
+set -x  GOPATH   $HOME/GO-lang
+set -x PATH $PATH $GOPATH/bin
+
+# starship
+starship init fish | source

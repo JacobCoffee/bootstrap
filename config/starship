@@ -1,0 +1,112 @@
+#format = "$git_branch$git_status$directory$character"
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character] # The name of the module we are configuring is "character"
+success_symbol = "[➜](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[✗](bold red)" # used if previous command failed
+
+# Indicates when in bash shell.
+# [custom.bash]
+# command = "echo 🚀"
+# when = '[ "$STARSHIP_SHELL" == "bash" ]'
+#
+# # Indicates when in fish shell.
+# [custom.fish]
+# command = "echo 🐠"
+# when = 'test "$STARSHIP_SHELL" = "fish"'
+#
+# # Indicates when in Nushell.
+# [custom.nu]
+# command = "echo 🦀"
+# shell = 'bash'
+# when = '[ "$STARSHIP_SHELL" == "" ]' # not set in Nushell
+
+# Displays status of Git repository when in a directory of a Git repository.
+[git_status]
+format = "[$all_status$ahead_behind]($style)"
+ahead = "⇡ $count "
+behind = "⇣ $count "
+deleted = "🗑 $count "
+diverged = " $count "
+stashed = "📦 $count "
+modified = "פֿ $count "
+staged = '[ $count ](green)'
+renamed = " $count "
+untracked = "🤷 ‍$count "
+style = "bold red"
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+read_only = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[python]
+symbol = " "
+
+[spack]
+symbol = "🅢 "
+
+[rust]
+symbol = " "
+
