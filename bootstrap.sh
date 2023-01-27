@@ -36,6 +36,7 @@ echo "Installing Rust" && curl https://sh.rustup.rs -sSf | sh
 # Configure Alacritty
 # =========================
 echo "Configuring Alacritty" && cp config/alacritty.yml "$HOME"/.config/alacritty/alacritty.yml
+sed -i "s/USERNAME/$USER/g" "$HOME"/.config/alacritty/alacritty.yml
 echo "Setting Dracula theme" && curl -L https://github.com/dracula/alacritty/archive/master.zip -o dracula.zip
 unzip dracula.zip && cp alacritty-master/dracula.yml "$HOME".config/alacritty/dracula.yml && rm dracula.zip rm -r alacritty-master
 
